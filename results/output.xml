@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210404 21:02:35.999" rpa="false" schemaversion="2">
+<suite id="s1" name="Buildbox" source="C:\Projetos\buildbox\tests\buildbox.robot">
+<test id="s1-t1" name="Caso de Teste 01: Login válido">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:02:36.222" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:02:36.222" endtime="20210404 21:02:41.185"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:36.222" endtime="20210404 21:02:41.185"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:02:41.192" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:02:41.186" endtime="20210404 21:02:41.192"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:41.186" endtime="20210404 21:02:41.192"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:41.194" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:02:41.193" endtime="20210404 21:02:41.346"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:41.347" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:02:41.346" endtime="20210404 21:02:41.470"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:41.193" endtime="20210404 21:02:41.470"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:41.472" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:02:41.471" endtime="20210404 21:02:41.554"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:41.471" endtime="20210404 21:02:41.555"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:02:41.558" endtime="20210404 21:02:43.687"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:41.557" endtime="20210404 21:02:43.687"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:36.221" endtime="20210404 21:02:43.688"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02: Login inválido">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:02:43.693" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:02:43.692" endtime="20210404 21:02:48.951"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:43.692" endtime="20210404 21:02:48.951"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:02:48.961" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:02:48.953" endtime="20210404 21:02:48.961"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:48.952" endtime="20210404 21:02:48.961"/>
+</kw>
+<kw name="Digitar e-mail ou senha inválidos" library="Resource" sourcename="Digitar ${EMAIL} ou ${SENHA} inválidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:48.965" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:02:48.964" endtime="20210404 21:02:49.258"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:49.259" level="INFO">Typing text 'Teste@1234' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:02:49.258" endtime="20210404 21:02:49.520"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:48.963" endtime="20210404 21:02:49.520"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:49.523" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:02:49.522" endtime="20210404 21:02:49.755"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:49.521" endtime="20210404 21:02:49.756"/>
+</kw>
+<kw name="Deve permanecer na página de login" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:02:49.757" endtime="20210404 21:02:49.807"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:49.756" endtime="20210404 21:02:49.807"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:02:49.809" endtime="20210404 21:02:52.038"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:49.809" endtime="20210404 21:02:52.038"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:43.691" endtime="20210404 21:02:52.040"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03: Iniciar nova atividade">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:02:52.045" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:02:52.044" endtime="20210404 21:02:57.192"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:52.043" endtime="20210404 21:02:57.193"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:02:57.199" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:02:57.194" endtime="20210404 21:02:57.199"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:57.194" endtime="20210404 21:02:57.199"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:57.200" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:02:57.200" endtime="20210404 21:02:57.351"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:57.351" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:02:57.351" endtime="20210404 21:02:57.484"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:57.199" endtime="20210404 21:02:57.484"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:57.486" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:02:57.485" endtime="20210404 21:02:57.587"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:57.485" endtime="20210404 21:02:57.587"/>
+</kw>
+<kw name="Clicar no botão de start" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='tracker-btn ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:02:57.589" endtime="20210404 21:02:58.855"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='tracker-btn ']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:02:58.855" level="INFO">Clicking button 'xpath://*[@id="root"]//button[@class='tracker-btn ']'.</msg>
+<status status="PASS" starttime="20210404 21:02:58.855" endtime="20210404 21:02:58.915"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='tracker-btn active']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:02:58.916" endtime="20210404 21:03:00.233"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:57.589" endtime="20210404 21:03:00.233"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:03:00.235" endtime="20210404 21:03:02.434"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:00.234" endtime="20210404 21:03:02.435"/>
+</kw>
+<status status="PASS" starttime="20210404 21:02:52.042" endtime="20210404 21:03:02.436"/>
+</test>
+<test id="s1-t4" name="Caso de Teste 04: Registrar fim de atividade">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:03:02.440" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:03:02.440" endtime="20210404 21:03:07.993"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:02.439" endtime="20210404 21:03:07.993"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:03:08.002" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:03:07.994" endtime="20210404 21:03:08.002"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:07.994" endtime="20210404 21:03:08.002"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:03:08.004" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:03:08.004" endtime="20210404 21:03:08.348"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:03:08.350" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:03:08.348" endtime="20210404 21:03:08.623"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:08.003" endtime="20210404 21:03:08.623"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:03:08.625" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:03:08.625" endtime="20210404 21:03:08.865"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:08.624" endtime="20210404 21:03:08.866"/>
+</kw>
+<kw name="Clicar no botão Stop" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>60</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210404 21:04:08.885" level="INFO">Slept 1 minute</msg>
+<status status="PASS" starttime="20210404 21:03:08.869" endtime="20210404 21:04:08.885"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='tracker-btn active']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:08.885" endtime="20210404 21:04:08.909"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='tracker-btn active']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:08.909" level="INFO">Clicking button 'xpath://*[@id="root"]//button[@class='tracker-btn active']'.</msg>
+<status status="PASS" starttime="20210404 21:04:08.909" endtime="20210404 21:04:09.001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]//h3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:09.002" endtime="20210404 21:04:10.373"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:08.867" endtime="20210404 21:04:10.373"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:04:10.375" endtime="20210404 21:04:12.635"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:10.374" endtime="20210404 21:04:12.636"/>
+</kw>
+<status status="PASS" starttime="20210404 21:03:02.438" endtime="20210404 21:04:12.636"/>
+</test>
+<test id="s1-t5" name="Caso de Teste 05: Exibir detalhes da atividade">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:04:12.642" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:04:12.641" endtime="20210404 21:04:18.473"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:12.640" endtime="20210404 21:04:18.474"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:04:18.480" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:04:18.475" endtime="20210404 21:04:18.480"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:18.475" endtime="20210404 21:04:18.480"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:18.481" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:04:18.481" endtime="20210404 21:04:18.639"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:18.640" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:04:18.639" endtime="20210404 21:04:18.771"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:18.481" endtime="20210404 21:04:18.771"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:18.773" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:04:18.772" endtime="20210404 21:04:18.868"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:18.772" endtime="20210404 21:04:18.869"/>
+</kw>
+<kw name="Clica no botão de &quot;Pasta&quot; da atividade" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:#root &gt; section &gt; main &gt; div &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div.rt-table &gt; div.rt-tbody &gt; div:nth-child(1) &gt; div &gt; div.rt-td.rt-expandable &gt; svg</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:18.870" endtime="20210404 21:04:21.068"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#root &gt; section &gt; main &gt; div &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div.rt-table &gt; div.rt-tbody &gt; div:nth-child(1) &gt; div &gt; div.rt-td.rt-expandable &gt; svg</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:21.069" level="INFO">Clicking element 'css:#root &gt; section &gt; main &gt; div &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div.rt-table &gt; div.rt-tbody &gt; div:nth-child(1) &gt; div &gt; div.rt-td.rt-expandable &gt; svg'.</msg>
+<status status="PASS" starttime="20210404 21:04:21.069" endtime="20210404 21:04:21.687"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210404 21:04:25.695" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210404 21:04:21.687" endtime="20210404 21:04:25.695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//ul[@class='table-body']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:25.695" endtime="20210404 21:04:25.720"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:18.870" endtime="20210404 21:04:25.720"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:04:25.721" endtime="20210404 21:04:27.868"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:25.721" endtime="20210404 21:04:27.869"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:12.639" endtime="20210404 21:04:27.870"/>
+</test>
+<test id="s1-t6" name="Caso de Teste 06: Editar usuário">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:04:27.875" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:04:27.874" endtime="20210404 21:04:35.423"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:27.874" endtime="20210404 21:04:35.423"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:04:35.429" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:04:35.424" endtime="20210404 21:04:35.429"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:35.424" endtime="20210404 21:04:35.429"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:35.430" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:04:35.430" endtime="20210404 21:04:35.613"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:35.614" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:04:35.613" endtime="20210404 21:04:35.919"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:35.430" endtime="20210404 21:04:35.920"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:35.922" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:04:35.921" endtime="20210404 21:04:36.121"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:35.921" endtime="20210404 21:04:36.122"/>
+</kw>
+<kw name="Acesar tela de edição do usuário" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//a[@class='profile-img']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:36.123" endtime="20210404 21:04:37.353"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//a[@class='profile-img']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:37.354" level="INFO">Clicking element 'xpath://*[@id="root"]//a[@class='profile-img']'.</msg>
+<status status="PASS" starttime="20210404 21:04:37.353" endtime="20210404 21:04:37.492"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:36.122" endtime="20210404 21:04:37.492"/>
+</kw>
+<kw name="Adiciona novo nome" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>Matherson Antonio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:37.494" level="INFO">Typing text 'Matherson Antonio' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210404 21:04:37.494" endtime="20210404 21:04:37.827"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:37.493" endtime="20210404 21:04:37.827"/>
+</kw>
+<kw name="Clicar no botão save" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='btn-primary']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:37.829" endtime="20210404 21:04:38.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//button[@class='btn-primary']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:38.534" level="INFO">Clicking element 'xpath://*[@id="root"]//button[@class='btn-primary']'.</msg>
+<status status="PASS" starttime="20210404 21:04:38.534" endtime="20210404 21:04:38.624"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:37.828" endtime="20210404 21:04:38.625"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:04:38.627" endtime="20210404 21:04:40.893"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:38.626" endtime="20210404 21:04:40.893"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:27.873" endtime="20210404 21:04:40.894"/>
+</test>
+<test id="s1-t7" name="Caso de Teste 07: Acessar página de login do site">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 21:04:40.896" level="INFO">Opening browser 'chrome' to base url 'https://tracker.buildbox.com.br/'.</msg>
+<status status="PASS" starttime="20210404 21:04:40.896" endtime="20210404 21:04:46.076"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:40.896" endtime="20210404 21:04:46.076"/>
+</kw>
+<kw name="Acessar página de login do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tracker Buildbox</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210404 21:04:46.082" level="INFO">Page title is 'Tracker Buildbox'.</msg>
+<status status="PASS" starttime="20210404 21:04:46.077" endtime="20210404 21:04:46.082"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:46.077" endtime="20210404 21:04:46.082"/>
+</kw>
+<kw name="Digitar e-mail e senha válidos" library="Resource" sourcename="Digitar ${EMAIL} e ${SENHA} válidos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>tester.buildbox@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:46.083" level="INFO">Typing text 'tester.buildbox@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210404 21:04:46.083" endtime="20210404 21:04:46.232"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Teste@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:46.232" level="INFO">Typing text 'Teste@123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210404 21:04:46.232" endtime="20210404 21:04:46.361"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:46.082" endtime="20210404 21:04:46.361"/>
+</kw>
+<kw name="Clicar no botão de log-in" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btnLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:46.362" level="INFO">Clicking button 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210404 21:04:46.362" endtime="20210404 21:04:46.472"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:46.362" endtime="20210404 21:04:46.472"/>
+</kw>
+<kw name="Clicar no botão sign out" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//li[@class='logout']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:46.473" endtime="20210404 21:04:47.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//li[@class='logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210404 21:04:47.580" level="INFO">Clicking element 'xpath://*[@id="root"]//li[@class='logout']'.</msg>
+<status status="PASS" starttime="20210404 21:04:47.579" endtime="20210404 21:04:47.658"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210404 21:04:50.660" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210404 21:04:47.658" endtime="20210404 21:04:50.660"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:46.473" endtime="20210404 21:04:50.660"/>
+</kw>
+<kw name="Página incial deve ser apresentada" library="Resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="root"]//img[@class='logo']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 21:04:50.662" endtime="20210404 21:04:50.716"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:50.661" endtime="20210404 21:04:50.717"/>
+</kw>
+<kw name="Fechar Navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 21:04:50.719" endtime="20210404 21:04:54.562"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:50.718" endtime="20210404 21:04:54.562"/>
+</kw>
+<status status="PASS" starttime="20210404 21:04:40.895" endtime="20210404 21:04:54.563"/>
+</test>
+<status status="PASS" starttime="20210404 21:02:36.001" endtime="20210404 21:04:54.567"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Buildbox">Buildbox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
